@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="App.css">
+  </head>
+  <body>
+
+    <!-- Navebar Start -->
+    <div class="topnav">
+      <img src="img/Tracker.png" alt="Le Tracker Logo">
+      <a href="MGT_App.html">All Trackers</a>
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tracker 1</a>
+        <div class="dropdown-menu" data-bs-theme="dark" style="background-color: #EBE1D4;">
+          <a class="dropdown-item" href="Tracker2.html" style="color: #0E2D40;">Tracker 2</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="Tracker3.html" style="color: #0E2D40;">Tracker 3</a>
+        </div>
+      <div class="topnav-right">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">User123</a>
+        <div class="dropdown-menu" data-bs-theme="dark" style="background-color: #EBE1D4;">
+          <a class="dropdown-item" href="#" style="color: #0E2D40;">Account</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#" style="color: #0E2D40;">Settings</a>
+        </div>
+        <img class="float-right" src="img/userIcon.png" alt="user image">
+      </div>
+    </div>
+    <!-- Navbat End -->
+
+    <audio id="myAudio">
+        <source src="ANNOYING SIREN.mp3" type="audio/mpeg">
+      </audio>
+  
+      <!-- Container Start -->
+     <div class="container-fluid">
+      <!-- Divder -->
+      <div class="row" id="divider"></div>
+
+      <div class="row">
+        <!-- Left Side -->
+        <div class="col-7">
+
+          <!-- GPS -->
+          <div class="row">
+            <div class="col-7">
+              <img src="img/Tracker1_GPS.png" alt="Tracker 1 GPS" id="GPS">
+            </div>
+            <div class="col-5">
+              <div class="row" style="border: solid;border-bottom: none; text-align: center;">
+                <div class="col-3" style="padding-top: 3px;">
+                  <img src="img/pinkCircle.png" alt="Tracekr 1" id="trackerImg">
+                </div>
+                <div class="col" style="padding: 10px 0px;">
+                  <h5>Tracker 1</h5>
+                </div>
+              </div>
+              <div class="row" style="border: solid; text-align: center;">
+                <div class="col-3" style="padding-top: 3px;">
+                  <img src="img/orangeCircle.png" alt="Tracekr 1" id="trackerImg">
+                </div>
+                <div class="col" style="padding: 10px 0px;">
+                  <h5>You Are Here</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Noise + GPS metrics -->
+          <div class="row" style="text-align: center;">
+            <div class="col" id="box-left">
+              <div class="row">
+                <div class="col">
+                  <h5>Time To Destination: <b>0 min</b></h5>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <h5>Distance: <b>0 miles</b></h5>
+                </div>
+              </div>
+            </div>
+            <div class="col" id="box-right">
+                <div class="row">
+                  <div class="col">
+                    <h5>Play / Pause Sound</h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col" style="text-align: right;">
+                    <button onclick="playAudio()" type="button" style="border: none; background-color: transparent;">
+                      <img src="img/playButton.png" alt="Noise Play Button" id="playButton">
+                    </button>
+                  </div>
+                  <div class="col" style="text-align: left;">
+                    <button onclick="pauseAudio()" type="button" style="border: none; background-color: transparent;">
+                      <img src="img/pauseButton.png" alt="Noise Play Button" id="playButton">
+                    </button>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        
+        <!-- Right Side -->
+        <div class="col-5">
+          <!-- Building View -->
+          <div class="row">
+            <div class="col">
+              <img src="img/Tracker1_Building.png" alt="Tracker 1 Building View" id="building1">
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+
+     <script>
+        var x = document.getElementById("myAudio"); 
+        
+        function playAudio() { 
+          x.play(); 
+        } 
+        
+        function pauseAudio() { 
+          x.pause(); 
+        }
+        </script>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
